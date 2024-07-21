@@ -259,8 +259,10 @@
 
 .estilo-card-perfil {
   width: 600px;
-  height: 180px;
+  height: 200px;
   background-image: url("../images/cielo.webp");
+  background-size: cover;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 
@@ -815,7 +817,16 @@
   border-radius: 54px;
   margin: 0 25px;
 }
-
+.horarios{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 575px) {
+  .horarios{
+    display: block;
+  }
+}
 .btn__calendar {
   background-color: rgba(255, 255, 255, 0);
   outline: none;
@@ -2766,7 +2777,7 @@ textarea {
   .estilo-card-perfil {
     display: initial !important;
     width: 270px;
-    height: 364px;
+    height: 430px;
     background-image: url(../images/cielo2.webp);
   }
 

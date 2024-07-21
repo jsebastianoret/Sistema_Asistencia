@@ -248,6 +248,10 @@
                             <label for="fecha_salida" class="fw-bolder">Fecha Salida</label>
                             <input type="text" class="form-control rounded" id="fecha_salida" readonly>
                         </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <label for="fecha_salida_nueva" class="fw-bolder">Nueva Fecha de Salida</label>
+                            <input type="text" class="form-control rounded" id="fecha_salida_nueva" readonly>
+                        </div>
                     </div>
                     <div class="col-lg-7 d-flex flex-column justify-content-between align-items-center gap-3 ps-sm-4">
                         <div class="text-center">
@@ -299,6 +303,8 @@
 
     <!-- DATA PARA MODAL -->
     <script>
+        var dato_salida;
+        var id_user;
         $('.edit').click(function (e) {
             e.preventDefault();
             $('#detail').modal('show');
@@ -332,6 +338,8 @@
                     $('#fecha_salida').val(response.date_out);
                     $('#employee_id').val(response.empid);
                     $('#employee_id2').val(response.empid);
+                    dato_salida=response.date_out;
+                    id_user=response.empid;
                     // Obtener la suma total de horas de trabajo del empleado
                     $.ajax({
                         type: 'POST',
@@ -379,6 +387,8 @@
                                 $('#faltas_justificadas').val(response.faltas_justificadas);
                             var totalFaltas = parseInt(response.faltas_injustificadas) + parseInt(response.faltas_justificadas);
                             $('#dias_faltados').val(totalFaltas);
+                            let faltaInjustificadas=response.faltas_injustificadas;
+                            salidaNew(dato_salida,faltaInjustificadas,id_user);
                         }
                     });
                 }
@@ -397,7 +407,26 @@
             $('#employee_id2').val(empId);
         });
 
+        function salidaNew(dato_salida,faltaInjustificadas,id_user){
+            var partesFecha = dato_salida.split('-');
+            var año = parseInt(partesFecha[0]);
+            var mes = parseInt(partesFecha[1]) - 1; 
+            var dia = parseInt(partesFecha[2]);
+            var nueva_fechaSalida = new Date(año, mes, dia);
+            nueva_fechaSalida.setDate(nueva_fechaSalida.getDate() + parseInt(faltaInjustificadas));
+            var nueva_fecha_salida_formateada = nueva_fechaSalida.toISOString().slice(0, 10);
+            $('#fecha_salida_nueva').val(nueva_fecha_salida_formateada);
+            
+            $.ajax({
+                type: 'POST',
+                url: 'insert_new_out.php',
+                data: { employee_id: id_user, new_out:nueva_fecha_salida_formateada },
+                dataType: 'json',
+                success: function (response) {
 
+                }
+            });
+        }
 
 
         function showProfileImage(photo) {
