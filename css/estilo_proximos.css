@@ -1,0 +1,63 @@
+.contenedor-leyenda{
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+
+.filter-buttons button {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 50px; 
+    border: none; 
+    color: white; 
+    font-size: 20px; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-danger {
+    background-color: #d9534f; 
+}
+.btn-warning {
+    background-color: #f0ad4e;
+}
+.btn-success {
+    background-color: #5cb85c;
+}
+
+.leyenda ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.leyenda li {
+    padding-left: 20px;
+    position: relative;
+    display: block; 
+    margin-bottom: 0px; 
+    text-align: left;
+}
+.leyenda li::before {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 10px; 
+    height: 2px; 
+}
+.leyenda .verde::before {
+    background-color: #5cb85c; 
+}
+.leyenda .amarillo::before {
+    background-color: #f0ad4e; 
+}
+.leyenda .rojo-2::before {
+    background-color: #d9534f; 
+}

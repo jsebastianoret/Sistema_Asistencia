@@ -1,0 +1,108 @@
+[01-Mar-2024 12:06:05 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:09:50 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:12:24 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:12:35 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:20:32 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:21:10 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:21:44 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:22:05 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:22:47 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[01-Mar-2024 12:24:22 America/Lima] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_date = (SELECT date_in FROM employees WHERE id = '586');
+    	SET ' at line 4 in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php:74
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php(74): mysqli->query('CREATE TEMPORAR...')
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 74
+[02-Apr-2024 13:23:42 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[02-Apr-2024 18:05:18 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[04-Apr-2024 18:23:07 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[05-Apr-2024 09:02:54 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[06-Apr-2024 12:04:53 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[08-Apr-2024 12:03:25 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[08-Apr-2024 18:14:19 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[11-Apr-2024 10:41:19 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[11-Apr-2024 18:05:06 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[13-Apr-2024 09:09:59 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[15-Apr-2024 08:58:49 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[19-Apr-2024 09:23:25 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[19-Apr-2024 17:13:05 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[20-Apr-2024 09:19:26 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[22-Apr-2024 09:13:37 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[22-Apr-2024 17:12:21 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[23-Apr-2024 17:22:25 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[25-Apr-2024 17:04:19 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[26-Apr-2024 12:38:53 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[27-Apr-2024 09:12:44 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[29-Apr-2024 09:26:45 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[29-Apr-2024 17:03:49 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[02-May-2024 13:17:26 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[02-May-2024 17:08:00 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[03-May-2024 12:36:05 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[06-May-2024 12:43:57 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[06-May-2024 17:05:00 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[07-May-2024 12:49:26 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[09-May-2024 17:06:03 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[10-May-2024 13:16:20 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[11-May-2024 09:02:31 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[13-May-2024 14:44:49 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[13-May-2024 17:22:19 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[14-May-2024 17:31:41 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[16-May-2024 08:42:07 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[16-May-2024 17:21:07 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[17-May-2024 12:16:51 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[17-May-2024 17:18:43 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[18-May-2024 09:26:12 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[18-May-2024 12:30:47 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[24-May-2024 17:15:27 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[25-May-2024 09:14:01 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[25-May-2024 12:20:00 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[27-May-2024 12:31:58 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[27-May-2024 17:05:53 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[28-May-2024 12:40:54 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[28-May-2024 17:07:26 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187
+[29-May-2024 09:15:11 America/Lima] PHP Warning:  Undefined variable $output in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/attendance.php on line 187

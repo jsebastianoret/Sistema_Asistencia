@@ -1,0 +1,23 @@
+.modal-dialog.modal-dialog-right {
+    margin-right: 0;
+    margin-left: auto;
+    transform: translate(25%, 0);
+}
+button i,
+.form-control {
+  font-size: 13.5px;
+}
+  
+.modal-backdrop {
+    display: none;
+}
+.verde-claro {
+    background-color: #b7e1cd !important;
+    /* Cambia este color por el verde deseado */
+}
+
+  /* Clase para celdas con valor "No" */
+ .rojo {
+    background-color: #f2b1b1 !important;
+    /* Cambia este color por el rojo deseado */
+}

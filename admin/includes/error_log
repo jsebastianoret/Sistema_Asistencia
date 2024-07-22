@@ -1,0 +1,204 @@
+[01-Mar-2024 13:40:38 America/Lima] PHP Warning:  move_uploaded_file(../documents/Hilda Flores - Segunda Carta de Advertencia.pdf): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 53
+[01-Mar-2024 13:40:38 America/Lima] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/php1cOxts&quot; to &quot;../documents/Hilda Flores - Segunda Carta de Advertencia.pdf&quot; in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 53
+[05-Mar-2024 09:19:37 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[06-Mar-2024 10:21:04 America/Lima] PHP Warning:  move_uploaded_file(../images/BIENVENIDA.jpg): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 37
+[06-Mar-2024 10:21:04 America/Lima] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpTYMLuj&quot; to &quot;../images/BIENVENIDA.jpg&quot; in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 37
+[06-Mar-2024 10:24:05 America/Lima] PHP Warning:  move_uploaded_file(../documents/Primera Carta de Advertencia Lizbel.pdf): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 53
+[06-Mar-2024 10:24:05 America/Lima] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpjYbni0&quot; to &quot;../documents/Primera Carta de Advertencia Lizbel.pdf&quot; in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 53
+[07-Mar-2024 16:29:59 America/Lima] PHP Warning:  move_uploaded_file(public_html/administracion-neonhouseled-com/asistencia/images/WhatsApp Image 2024-03-07 at 10.30.00 AM (1).jpeg): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 37
+[07-Mar-2024 16:29:59 America/Lima] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/php7wwsPP&quot; to &quot;public_html/administracion-neonhouseled-com/asistencia/images/WhatsApp Image 2024-03-07 at 10.30.00 AM (1).jpeg&quot; in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_add.php on line 37
+[07-Mar-2024 16:32:39 America/Lima] PHP Warning:  move_uploaded_file(../images/WhatsApp Image 2024-03-07 at 10.29.59 AM.jpeg): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_edit.php on line 34
+[07-Mar-2024 16:32:39 America/Lima] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpdYNUvI&quot; to &quot;../images/WhatsApp Image 2024-03-07 at 10.29.59 AM.jpeg&quot; in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/publicacion_edit.php on line 34
+[14-Mar-2024 08:22:12 America/Boise] PHP Fatal error:  Uncaught TypeError: end(): Argument #1 ($array) must be of type array, null given in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php:23
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php(23): end(NULL)
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php on line 23
+[14-Mar-2024 08:56:24 America/Boise] PHP Warning:  Undefined array key "estado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/test_add.php on line 12
+[15-Mar-2024 10:55:17 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[15-Mar-2024 10:56:57 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[15-Mar-2024 10:56:57 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[15-Mar-2024 10:57:44 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[15-Mar-2024 10:57:44 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[15-Mar-2024 11:56:32 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[15-Mar-2024 11:56:32 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[18-Mar-2024 10:31:55 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[18-Mar-2024 10:31:55 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[18-Mar-2024 10:53:19 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[18-Mar-2024 10:53:19 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[18-Mar-2024 10:53:40 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[18-Mar-2024 10:53:40 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[18-Mar-2024 10:54:14 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[18-Mar-2024 10:54:14 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[18-Mar-2024 10:58:12 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[18-Mar-2024 10:58:12 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[18-Mar-2024 12:07:00 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[19-Mar-2024 10:53:25 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[19-Mar-2024 10:53:33 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[19-Mar-2024 10:53:33 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[21-Mar-2024 17:08:45 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[21-Mar-2024 17:08:45 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[22-Mar-2024 08:47:06 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[22-Mar-2024 08:47:06 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[22-Mar-2024 08:48:13 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[22-Mar-2024 08:48:13 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[22-Mar-2024 08:58:41 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[22-Mar-2024 08:59:21 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[22-Mar-2024 08:59:50 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[22-Mar-2024 09:04:04 America/Boise] PHP Warning:  unlink(../../img-eventos/): Is a directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_delete.php on line 24
+[22-Mar-2024 09:51:44 America/Boise] PHP Warning:  Undefined array key "estado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/test_add.php on line 24
+[22-Mar-2024 09:57:18 America/Boise] PHP Warning:  Undefined array key "estado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/test_add.php on line 24
+[22-Mar-2024 12:57:12 America/Boise] PHP Warning:  Undefined array key "estado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/test_add.php on line 24
+[22-Mar-2024 12:59:59 America/Boise] PHP Warning:  Undefined array key "estado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/test_add.php on line 24
+[24-Mar-2024 12:11:04 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[25-Mar-2024 11:53:37 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 45
+[25-Mar-2024 11:53:37 America/Lima] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php:71
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(71): mysqli->prepare('SELECT employee...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(47): getEmployeeData('542', Object(mysqli))
+#2 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 71
+[25-Mar-2024 11:55:25 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 11:55:25 America/Lima] PHP Warning:  fopen(documents/images/logo.png): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 1277
+[25-Mar-2024 11:55:25 America/Lima] PHP Fatal error:  Uncaught Exception: FPDF error: Can't open image file: documents/images/logo.png in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php:270
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1279): FPDF->Error('Can't open imag...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(893): FPDF->_parsepng('documents/image...')
+#2 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(107): FPDF->Image('documents/image...', 5, 5, 45, 45)
+#3 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(457): generateMemorandum(Object(FPDF), Array)
+#4 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 270
+[25-Mar-2024 11:57:07 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 11:57:07 America/Lima] PHP Warning:  file_get_contents(/home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 1614
+[25-Mar-2024 11:57:07 America/Lima] PHP Fatal error:  Uncaught Exception: FPDF error: Font file not found: /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php:270
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1616): FPDF->Error('Font file not f...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1850): FPDF->_putfonts()
+#2 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1906): FPDF->_putresources()
+#3 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(287): FPDF->_enddoc()
+#4 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(991): FPDF->Close()
+#5 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(466): FPDF->Output('documents/memor...', 'F')
+#6 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 270
+[25-Mar-2024 12:01:19 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 12:01:19 America/Lima] PHP Warning:  file_get_contents(/home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 1614
+[25-Mar-2024 12:01:19 America/Lima] PHP Fatal error:  Uncaught Exception: FPDF error: Font file not found: /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php:270
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1616): FPDF->Error('Font file not f...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1850): FPDF->_putfonts()
+#2 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1906): FPDF->_putresources()
+#3 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(287): FPDF->_enddoc()
+#4 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(991): FPDF->Close()
+#5 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(466): FPDF->Output('documents/carta...', 'F')
+#6 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 270
+[25-Mar-2024 11:03:22 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[25-Mar-2024 11:03:40 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[25-Mar-2024 12:06:34 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 12:06:34 America/Lima] PHP Warning:  file_get_contents(/home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 1614
+[25-Mar-2024 12:06:34 America/Lima] PHP Fatal error:  Uncaught Exception: FPDF error: Font file not found: /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php:270
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1616): FPDF->Error('Font file not f...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1850): FPDF->_putfonts()
+#2 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1906): FPDF->_putresources()
+#3 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(287): FPDF->_enddoc()
+#4 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(991): FPDF->Close()
+#5 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(466): FPDF->Output('documents/memor...', 'F')
+#6 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 270
+[25-Mar-2024 12:08:49 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 12:08:49 America/Lima] PHP Warning:  file_get_contents(/home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 1614
+[25-Mar-2024 12:08:49 America/Lima] PHP Fatal error:  Uncaught Exception: FPDF error: Font file not found: /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php:270
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1616): FPDF->Error('Font file not f...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1850): FPDF->_putfonts()
+#2 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1906): FPDF->_putresources()
+#3 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(287): FPDF->_enddoc()
+#4 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(991): FPDF->Close()
+#5 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(466): FPDF->Output('documents/memor...', 'F')
+#6 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 270
+[25-Mar-2024 12:13:42 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 12:13:42 America/Lima] PHP Warning:  file_get_contents(/home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z): Failed to open stream: No such file or directory in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 1614
+[25-Mar-2024 12:13:42 America/Lima] PHP Fatal error:  Uncaught Exception: FPDF error: Font file not found: /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/font/z/DejaVuSans.z in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php:270
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1616): FPDF->Error('Font file not f...')
+#1 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1850): FPDF->_putfonts()
+#2 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(1906): FPDF->_putresources()
+#3 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(287): FPDF->_enddoc()
+#4 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php(991): FPDF->Close()
+#5 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php(466): FPDF->Output('documents/memor...', 'F')
+#6 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/fpdf/fpdf.php on line 270
+[25-Mar-2024 11:16:43 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[25-Mar-2024 12:17:46 America/Lima] PHP Warning:  Undefined variable $filePath in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/generate-doc.php on line 422
+[25-Mar-2024 13:21:40 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[25-Mar-2024 13:22:58 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[25-Mar-2024 13:24:24 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[25-Mar-2024 13:26:02 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_edit.php on line 11
+[26-Mar-2024 08:56:53 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_add.php on line 9
+[26-Mar-2024 08:59:51 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_add.php on line 9
+[26-Mar-2024 09:03:07 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_add.php on line 9
+[26-Mar-2024 09:12:25 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_add.php on line 9
+[26-Mar-2024 09:19:29 America/Boise] PHP Warning:  Undefined array key "departamento" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/practicantes_add.php on line 9
+[27-Mar-2024 10:13:43 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[01-Apr-2024 12:02:18 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[01-Apr-2024 12:02:18 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[01-Apr-2024 12:41:49 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[01-Apr-2024 12:41:49 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[01-Apr-2024 12:41:49 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[01-Apr-2024 13:12:59 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[01-Apr-2024 13:12:59 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[01-Apr-2024 13:13:20 America/Boise] PHP Warning:  Undefined array key "empleado" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 12
+[01-Apr-2024 13:13:20 America/Boise] PHP Warning:  Undefined array key "negocio" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/evento_edit.php on line 13
+[01-Apr-2024 16:08:51 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[01-Apr-2024 16:09:19 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[01-Apr-2024 16:10:42 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[01-Apr-2024 16:10:50 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[01-Apr-2024 16:10:54 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[01-Apr-2024 16:11:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[02-Apr-2024 09:55:41 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 29
+[02-Apr-2024 10:04:25 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 26
+[02-Apr-2024 10:06:19 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 26
+[02-Apr-2024 10:11:02 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 26
+[02-Apr-2024 10:15:56 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php:9) in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/guardar_asistencia.php on line 26
+[02-Apr-2024 11:10:17 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[04-Apr-2024 10:38:07 America/Boise] PHP Warning:  Undefined array key "id" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/actividad_add.php on line 5
+[15-Apr-2024 14:16:32 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[15-Apr-2024 15:56:53 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[15-Apr-2024 16:44:12 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[16-Apr-2024 10:11:59 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[17-Apr-2024 08:10:40 America/Boise] PHP Fatal error:  Uncaught TypeError: end(): Argument #1 ($array) must be of type array, null given in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php:23
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php(23): end(NULL)
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php on line 23
+[18-Apr-2024 09:42:19 America/Boise] PHP Fatal error:  Uncaught TypeError: end(): Argument #1 ($array) must be of type array, null given in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php:23
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php(23): end(NULL)
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php on line 23
+[18-Apr-2024 09:44:12 America/Boise] PHP Fatal error:  Uncaught TypeError: end(): Argument #1 ($array) must be of type array, null given in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php:23
+Stack trace:
+#0 /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php(23): end(NULL)
+#1 {main}
+  thrown in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/data_notas.php on line 23
+[22-Apr-2024 09:02:24 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[22-Apr-2024 11:44:48 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[29-Apr-2024 14:27:24 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[03-May-2024 23:26:16 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[04-May-2024 10:14:32 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[04-May-2024 13:51:53 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[04-May-2024 14:47:24 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[06-May-2024 11:39:00 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[07-May-2024 10:59:04 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[11-May-2024 10:50:27 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[13-May-2024 11:34:28 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[14-May-2024 10:18:01 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[17-May-2024 10:36:37 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[20-May-2024 11:59:05 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[21-May-2024 13:09:35 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[25-May-2024 10:59:10 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[27-May-2024 13:46:23 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[28-May-2024 12:36:01 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
+[29-May-2024 09:46:06 America/Boise] PHP Warning:  Undefined array key "admin" in /home3/ghxumdmy/public_html/administracion-neonhouseled-com/asistencia/admin/includes/session.php on line 10
