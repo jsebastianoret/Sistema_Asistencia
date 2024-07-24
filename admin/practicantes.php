@@ -53,8 +53,7 @@
                 <th class="align-middle">Unidad de Negocio</th>
                 <th class="align-middle">Área</th>
                 <th class="align-middle">Departamento</th>
-                <th class="align-middle">Horarios</th>
-                
+                <th class="align-middle">Horarios</th>                
                 <th class="align-middle">Acción</th>
                 <th class="align-middle">Acción 2</th>
             </tr>
