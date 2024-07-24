@@ -54,7 +54,7 @@
                 <th class="align-middle">Área</th>
                 <th class="align-middle">Departamento</th>
                 <th class="align-middle">Horarios</th>
-                <th class="align-middle">Horas Extra</th> <!-- Nueva columna para Horas Extra -->
+                
                 <th class="align-middle">Acción</th>
                 <th class="align-middle">Acción 2</th>
             </tr>
@@ -92,9 +92,7 @@
                     <td class="align-middle">
                         <?= date('h:i A', strtotime($row['time_in'])) . ' - ' . date('h:i A', strtotime($row['time_out'])); ?>
                     </td>
-                    <td class="align-middle">
-                        <?= $row['extra_hour']; ?> <!-- Mostrar las horas extras -->
-                    </td>
+                    
                     <td class="align-middle">
                         <div class="d-flex flex-wrap justify-content-center gap-1">
                             <?php if ($gestionPracticantes3 == "Sí") { ?>
