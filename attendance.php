@@ -1,6 +1,7 @@
 <?php
 
 date_default_timezone_set('America/Lima');
+include 'admin/function_count_justified_and_unjustified_absences.php';
 
 if (isset($_POST['employee'])) {
 	$output = array('error' => false);
@@ -18,6 +19,15 @@ if (isset($_POST['employee'])) {
 		$row = $query->fetch_assoc();
 		$id = $row['id'];
 		$date_out = $row['date_out'];
+        
+        $resultado_json = cantFaltas($id);
+		$resultado_array = json_decode($resultado_json, true);
+        $faltas_injustificadas = $resultado_array['faltas_injustificadas'];
+		$date_out_obj = new DateTime($date_out);
+        $date_out_obj->modify('+' . $faltas_injustificadas . ' days');
+        $new_date_out = $date_out_obj->format('Y-m-d');
+		$update_sql = "UPDATE employees SET date_out_new = '$new_date_out' WHERE id = $id";
+		$conn->query($update_sql);
 
 		$sql = "SELECT * FROM mejor_colaborador ORDER BY id DESC LIMIT 3";
 		$query = $conn->query($sql);

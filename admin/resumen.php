@@ -248,6 +248,10 @@
                             <label for="fecha_salida" class="fw-bolder">Fecha Salida</label>
                             <input type="text" class="form-control rounded" id="fecha_salida" readonly>
                         </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <label for="fecha_salida_nueva" class="fw-bolder">Nueva Fecha de Salida</label>
+                            <input type="text" class="form-control rounded" id="fecha_salida_nueva" readonly>
+                        </div>
                     </div>
                     <div class="col-lg-7 d-flex flex-column justify-content-between align-items-center gap-3 ps-sm-4">
                         <div class="text-center">
@@ -299,6 +303,8 @@
 
     <!-- DATA PARA MODAL -->
     <script>
+        var dato_salida;
+        var id_user;
         $('.edit').click(function (e) {
             e.preventDefault();
             $('#detail').modal('show');
@@ -354,6 +360,77 @@
                 data: { employee_id: response.empid },
                 dataType: 'json',
                 success: function (response) {
+                    $('#employee_title').html(response.firstname + ' ' + response.lastname);
+                    $('#cod_practicante').val(response.employee_id);
+                    $('#negocio').val(response.nombre_negocio);
+                    $('#cargo').val(response.description);
+                    $('#horario').val(response.schedule_id).val(response.time_in + ' - ' + response.time_out);
+                    $('#tiempo').val(response.time_practice + ' meses');
+                    $('#celular').val(response.contact_info);
+                    $('#cumpleaños').val(response.birthday);
+                    $('#dni').val(response.dni);
+                    $('#email_personal').val(response.personal_email);
+                    $('#email_institucional').val(response.institutional_email);
+                    $('#centro_estudios').val(response.university);
+                    $('#carrera').val(response.career);
+                    $('#fecha_ingreso').val(response.date_in);
+                    $('#fecha_salida').val(response.date_out);
+                    $('#employee_id').val(response.empid);
+                    $('#employee_id2').val(response.empid);
+                    dato_salida=response.date_out;
+                    id_user=response.empid;
+                    // Obtener la suma total de horas de trabajo del empleado
+                    $.ajax({
+                        type: 'POST',
+                        url: 'get_total_hours.php',
+                        data: { employee_id: response.empid },
+                        dataType: 'json',
+                        success: function (response) {
+                            $('#sum_num_hr').val(parseFloat(response.total_hours).toFixed(2));
+                        }
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: 'get_cantidad_asistencia.php',
+                        data: { employee_id: response.empid },
+                        dataType: 'json',
+                        success: function (response) {
+                            $('#dias_trabajados').val(response.cantidad_asistencia);
+                        }
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: 'get_cantidad_faltas.php',
+                        data: { employee_id: response.empid },
+                        dataType: 'json',
+                        success: function (response) {
+                            $('#dias_faltados').val(response.cantidad_faltas);
+                        }
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: 'get_cantidad_tardanzas.php',
+                        data: { employee_id: response.empid },
+                        dataType: 'json',
+                        success: function (response) {
+                            $('#dias_tardados').val(response.cantidad_tardanzas);
+                        }
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: 'get_cantidad_faltas_justificadas_injustificadas.php',
+                        data: { employee_id: response.empid },
+                        dataType: 'json',
+                        success: function (response) {
+                            $('#faltas_injustificadas').val(response.faltas_injustificadas),
+                                $('#faltas_justificadas').val(response.faltas_justificadas);
+                            var totalFaltas = parseInt(response.faltas_injustificadas) + parseInt(response.faltas_justificadas);
+                            $('#dias_faltados').val(totalFaltas);
+                            let faltaInjustificadas=response.faltas_injustificadas;
+                            salidaNew(dato_salida,faltaInjustificadas,id_user);
+                        }
+                    });
+
                     $('#dias_trabajados').val(response.cantidad_asistencia);
                 }
             });
@@ -404,7 +481,26 @@
             $('#employee_id2').val(empId);
         });
 
+        function salidaNew(dato_salida,faltaInjustificadas,id_user){
+            var partesFecha = dato_salida.split('-');
+            var año = parseInt(partesFecha[0]);
+            var mes = parseInt(partesFecha[1]) - 1; 
+            var dia = parseInt(partesFecha[2]);
+            var nueva_fechaSalida = new Date(año, mes, dia);
+            nueva_fechaSalida.setDate(nueva_fechaSalida.getDate() + parseInt(faltaInjustificadas));
+            var nueva_fecha_salida_formateada = nueva_fechaSalida.toISOString().slice(0, 10);
+            $('#fecha_salida_nueva').val(nueva_fecha_salida_formateada);
+            
+            $.ajax({
+                type: 'POST',
+                url: 'insert_new_out.php',
+                data: { employee_id: id_user, new_out:nueva_fecha_salida_formateada },
+                dataType: 'json',
+                success: function (response) {
 
+                }
+            });
+        }
 
 
         function showProfileImage(photo) {

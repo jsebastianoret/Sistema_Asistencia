@@ -414,6 +414,10 @@
                                 <input type="date" class="form-control rounded" id="edit_date_out" name="date_out" required>
                             </div>
                             <div class="col-sm-4">
+                                <label for="edit_date_out" class="fw-bolder">Nueva Fecha de Salida</label>
+                                <input type="date" class="form-control rounded" id="edit_date_out_new" name="edit_date_out_new" required>
+                            </div>
+                            <div class="col-sm-4">
                                 <label for="edit_time_practice" class="fw-bolder">Tiempo (meses)</label>
                                 <select class="form-control rounded" name="time_practice" id="edit_time_practice" required>
                                     <option selected id="time_practice_val"></option>
@@ -834,6 +838,8 @@
             $('#add_hora').modal('show');
         });
 
+        var dato_salida;
+        var id_user;
         function getRow(id) {
             $.ajax({
                 type: 'POST',
@@ -868,6 +874,38 @@
                     $('#edit_institutional_email').val(response.institutional_email);
                     $('#edit_university').val(response.university);
                     $('#edit_career').val(response.career);
+                    dato_salida=response.date_out;
+                    id_user=response.empid;
+                    $.ajax({
+                        type: 'POST',
+                        url: 'get_cantidad_faltas_justificadas_injustificadas.php',
+                        data: { employee_id: response.empid },
+                        dataType: 'json',
+                        success: function (response) {                            
+                            let faltaInjustificadas=response.faltas_injustificadas;
+                            salidaNew(dato_salida,faltaInjustificadas,id_user);
+                        }
+                    });
+                }
+            });
+        }
+        function salidaNew(dato_salida,faltaInjustificadas,id_user){
+            var partesFecha = dato_salida.split('-');
+            var año = parseInt(partesFecha[0]);
+            var mes = parseInt(partesFecha[1]) - 1; 
+            var dia = parseInt(partesFecha[2]);
+            var nueva_fechaSalida = new Date(año, mes, dia);
+            nueva_fechaSalida.setDate(nueva_fechaSalida.getDate() + parseInt(faltaInjustificadas));
+            var nueva_fecha_salida_formateada = nueva_fechaSalida.toISOString().slice(0, 10);
+            $('#edit_date_out_new').val(nueva_fecha_salida_formateada).html(nueva_fecha_salida_formateada);
+            
+            $.ajax({
+                type: 'POST',
+                url: 'insert_new_out.php',
+                data: { employee_id: id_user, new_out:nueva_fecha_salida_formateada },
+                dataType: 'json',
+                success: function (response) {
+
                 }
             });
         }
