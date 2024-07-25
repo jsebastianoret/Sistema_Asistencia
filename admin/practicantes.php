@@ -43,152 +43,149 @@
                         </button>
                     </div>
                 <?php } ?>
-                <div class="card-body table-responsive">
-                    <table id="example1" class="table table-bordered">
-                        <thead>
-                            <th class="align-middle">Código de Asistencia</th>
-                            <th class="align-middle">Foto</th>
-                            <th class="align-middle">Nombre</th>
-                            <th class="align-middle">Unidad de Negocio</th>
-                            <th class="align-middle">Área</th>
-                            <th class="align-middle">Departamento</th>
-                            <th class="align-middle">Horarios</th>
-                            <th class="align-middle">Acción</th>
-                            <th class="align-middle">Acción 2</th>
-                        </thead>
-                        <tbody>
+    <div class="card-body table-responsive">
+    <table id="example1" class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="align-middle">Código de Asistencia</th>
+                <th class="align-middle">Foto</th>
+                <th class="align-middle">Nombre</th>
+                <th class="align-middle">Unidad de Negocio</th>
+                <th class="align-middle">Área</th>
+                <th class="align-middle">Departamento</th>
+                <th class="align-middle">Horarios</th>                
+                <th class="align-middle">Acción</th>
+                <th class="align-middle">Acción 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $sql = "SELECT *, employees.id AS empid
+                    FROM employees
+                    LEFT JOIN position ON position.id = employees.position_id
+                    LEFT JOIN schedules ON schedules.id = employees.schedule_id
+                    LEFT JOIN negocio ON negocio.id = employees.negocio_id
+                    LEFT JOIN departamentos ON departamentos.id = employees.departamento_id";
+            $query = $conn->query($sql);
+
+            while ($row = $query->fetch_assoc()) { ?>
+                <tr>
+                    <td class="align-middle">
+                        <?= $row['employee_id']; ?>
+                    </td>
+                    <td class="align-middle">
+                        <img src="<?= (!empty($row['photo'])) ? '../images/' . $row['photo'] : '../images/profile.jpg'; ?>" width="30px" height="30px">
+                    </td>
+                    <td class="align-middle">
+                        <?= $row['firstname'] . ' ' . $row['lastname']; ?>
+                    </td>
+                    <td class="align-middle">
+                        <?= $row['nombre_negocio']; ?>
+                    </td>
+                    <td class="align-middle">
+                        <?= $row['description']; ?>
+                    </td>
+                    <td class="align-middle">
+                        <?= $row['nombre_departamento']; ?>
+                    </td>
+                    <td class="align-middle">
+                        <?= date('h:i A', strtotime($row['time_in'])) . ' - ' . date('h:i A', strtotime($row['time_out'])); ?>
+                    </td>
+                    
+                    <td class="align-middle">
+                        <div class="d-flex flex-wrap justify-content-center gap-1">
+                            <?php if ($gestionPracticantes3 == "Sí") { ?>
+                                <button class="btn btn-success btn-sm rounded-3 edit" data-id="<?= $row['empid'] ?>">
+                                    <i class="fa fa-edit"></i> Editar
+                                </button>
+                            <?php } ?>
+                            <?php if ($gestionPracticantes4 == "Sí") { ?>
+                                <button class="btn btn-danger btn-sm rounded-3 delete" data-id="<?= $row['empid'] ?>">
+                                    <i class="fa fa-trash"></i> Eliminar
+                                </button>
+                            <?php } ?>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center gap-1 mt-1">
                             <?php
-                            $sql = "SELECT *, employees.id AS empid
-                                 FROM employees
-                                 LEFT JOIN position
-                                 ON position.id = employees.position_id
-                                 LEFT JOIN schedules
-                                 ON schedules.id = employees.schedule_id
-                                 LEFT JOIN negocio
-                                 ON negocio.id = employees.negocio_id
-                                 LEFT JOIN departamentos
-                                 ON departamentos.id = employees.departamento_id";
-                            $query = $conn->query($sql);
+                            if ($user['id'] == 1) {
+                                $gestionPracticantes5 = "Sí";
+                            } else if ($user['id'] == 2 && ($row['position_id'] == 11 || $row['position_id'] == 13)) {
+                                $gestionPracticantes5 = "Sí";
+                            } else if ($user['id'] == 4 && $row['position_id'] == 13) {
+                                $gestionPracticantes5 = "Sí";
+                            } else if ($user['id'] == 5 && $row['position_id'] == 2) {
+                                $gestionPracticantes5 = "Sí";
+                            } else if ($user['id'] == 3 && !($row['position_id'] == 1 || $row['position_id'] == 2 || $row['position_id'] == 11 || $row['position_id'] == 13)) {
+                                $gestionPracticantes5 = "Sí";
+                            } else if ($user['id'] == 6 && $row['position_id'] == 7) {
+                                $gestionPracticantes5 = "Sí";
+                            } else {
+                                $gestionPracticantes5 = "No";
+                            }
 
-                            while ($row = $query->fetch_assoc()) { ?>
-                                <tr>
-                                    <td class="align-middle">
-                                        <?= $row['employee_id']; ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <img src="<?= (!empty($row['photo'])) ? '../images/' . $row['photo'] : '../images/profile.jpg'; ?>" width="30px" height="30px">
-                                    </td>
-                                    <td class="align-middle">
-                                        <?= $row['firstname'] . ' ' . $row['lastname']; ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?= $row['nombre_negocio']; ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?= $row['description']; ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?= $row['nombre_departamento']; ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?= date('h:i A', strtotime($row['time_in'])) . ' - ' . date('h:i A', strtotime($row['time_out'])); ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="d-flex flex-wrap justify-content-center gap-1">
-                                            <?php if ($gestionPracticantes3 == "Sí") { ?>
-                                                <button class="btn btn-success btn-sm rounded-3 edit" data-id="<?= $row['empid'] ?>">
-                                                    <i class="fa fa-edit"></i> Editar
-                                                </button>
-                                            <?php } ?>
-                                            <?php if ($gestionPracticantes4 == "Sí") { ?>
-                                                <button class="btn btn-danger btn-sm rounded-3 delete" data-id="<?= $row['empid'] ?>">
-                                                    <i class="fa fa-trash"></i> Eliminar
-                                                </button>
-                                            <?php } ?>
-                                        </div>
-                                        <div class="d-flex flex-wrap justify-content-center gap-1 mt-1">
-                                            <?php
-                                            if ($user['id'] == 1) {
-                                                $gestionPracticantes5 = "Sí";
-                                            } else if ($user['id'] == 2 && ($row['position_id'] == 11 || $row['position_id'] == 13)) {
-                                                $gestionPracticantes5 = "Sí";
-                                            } else if ($user['id'] == 4 && $row['position_id'] == 13) {
-                                                $gestionPracticantes5 = "Sí";
-                                            } else if ($user['id'] == 5 && $row['position_id'] == 2) {
-                                                $gestionPracticantes5 = "Sí";
-                                            } else if ($user['id'] == 3 && !($row['position_id'] == 1 || $row['position_id'] == 2 || $row['position_id'] == 11 || $row['position_id'] == 13)) {
-                                                $gestionPracticantes5 = "Sí";
-                                            } else if ($user['id'] == 6 && $row['position_id'] == 7) {
-                                                $gestionPracticantes5 = "Sí";
-                                            } else {
-                                                $gestionPracticantes5 = "No";
-                                            }
-
-                                            if ($gestionPracticantes5 == "Sí") { ?>
-                                                <button class="btn btn-primary btn-sm rounded-3 add" data-id="<?= $row['empid'] ?>">
-                                                    <i class="fa fa-pencil"></i> Agregar Nota
-                                                </button>
-                                            <?php } ?>
-                                            <?php if ($gestionPracticantes6 == "Sí") { ?>
-                                                <a href="practicante-notas.php?id=<?= $row['empid'] ?>&nombre=<?= urlencode($row['firstname'] . ' ' . $row['lastname']) ?>&negocio=<?= urlencode($row['nombre_negocio']) ?>&position=<?= urldecode($row['description']) ?>&fecha_inicio=<?= urldecode($row['date_in']) ?>&fecha_fin=<?= urldecode($row['date_out']) ?>&codigo_practicante=<?= $row['employee_id'] ?>&id_practicante=<?= $row['empid'] ?>" class="btn btn-warning btn-sm rounded-3 text-white">
-                                                    <i class="fa fa-eye"></i> Ver Notas
-                                                </a>
-                                            <?php } ?>
-                                            <?php if ($gestionPracticantes7 == "Sí") { ?>
-                                                <button class="btn btn-primary btn-sm rounded-3 hora_extra" data-id="<?php echo htmlspecialchars($row['empid']); ?>">
-                                                    <i class="fa fa-clock"></i> Horas Extra
-                                                </button>
-                                            <?php } ?>
-                                            <button class="btn btn-info btn-sm rounded-3 text-light activities" data-id="<?= $row['empid'] ?>">
-                                                <i class="fa-solid fa-list-check"></i> Actividades
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <button class="btn btn-success btn-sm rounded-3" data-id="<?= $row['empid'] ?>">
-                                            <i class="fa fa-edit"></i> Convers
-                                        </button>
-                                        <button type="submit" name="memo_id" value="<?= $row['empid'] ?>" class="btn btn-danger btn-sm rounded-3 mt-1 editar" data-id="<?= $row['empid'] ?>">
-                                            <i class="fa fa-edit"></i> Memos
-                                        </button>
-
-
-
-                                        <div class="modal fade" id="editar_entrevista" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
-                                            <div class="modal-dialog modal-md">
-                                                <div class="modal-content rounded-3">
-                                                    <div class="modal-header py-2">
-                                                        <h4 class="modal-title text-white fw-bold ms-auto">Documentos</h4>
-                                                        <button class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <form id="documentoForm" method="post" action="includes/generate-doc.php">
-                                                        <div class="modal-body d-flex flex-column gap-2 py-4 px-5">
-                                                            <input type="hidden" class="id" name="id" value="<?= $row['empid'] ?>">
-                                                            <div id="estado1">
-                                                                <label for="state_entrevista" class="fw-bolder">Seleccione documento</label>
-                                                                <select class="form-control rounded" name="documento_tipo" id="documento_tipo">
-                                                                    <option value=0 disabled>- Seleccionar -</option>
-                                                                    <option value="memorandum">Memorandum</option>
-                                                                    <option value="carta_despido">Carta de despido</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-success" name="edit">
-                                                                <i class="fa fa-edit me-2"></i>Generar documento
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                            if ($gestionPracticantes5 == "Sí") { ?>
+                                <button class="btn btn-primary btn-sm rounded-3 add" data-id="<?= $row['empid'] ?>">
+                                    <i class="fa fa-pencil"></i> Agregar Nota
+                                </button>
+                            <?php } ?>
+                            <?php if ($gestionPracticantes6 == "Sí") { ?>
+                                <a href="practicante-notas.php?id=<?= $row['empid'] ?>&nombre=<?= urlencode($row['firstname'] . ' ' . $row['lastname']) ?>&negocio=<?= urlencode($row['nombre_negocio']) ?>&position=<?= urldecode($row['description']) ?>&fecha_inicio=<?= urldecode($row['date_in']) ?>&fecha_fin=<?= urldecode($row['date_out']) ?>&codigo_practicante=<?= $row['employee_id'] ?>&id_practicante=<?= $row['empid'] ?>" class="btn btn-warning btn-sm rounded-3 text-white">
+                                    <i class="fa fa-eye"></i> Ver Notas
+                                </a>
+                            <?php } ?>
+                            <?php if ($gestionPracticantes7 == "Sí") { ?>
+                                <button class="btn btn-primary btn-sm rounded-3 hora_extra" data-id="<?= htmlspecialchars($row['empid']); ?>">
+                                    <i class="fa fa-clock"></i> Horas Extra
+                                </button>
+                            <?php } ?>
+                            <button class="btn btn-info btn-sm rounded-3 text-light activities" data-id="<?= $row['empid'] ?>">
+                                <i class="fa-solid fa-list-check"></i> Actividades
+                            </button>
+                        </div>
+                    </td>
+                    <td class="align-middle text-center">
+                        <button class="btn btn-success btn-sm rounded-3" data-id="<?= $row['empid'] ?>">
+                            <i class="fa fa-edit"></i> Convers
+                        </button>
+                        <button type="submit" name="memo_id" value="<?= $row['empid'] ?>" class="btn btn-danger btn-sm rounded-3 mt-1 editar" data-id="<?= $row['empid'] ?>">
+                            <i class="fa fa-edit"></i> Memos
+                        </button>
+                        <div class="modal fade" id="editar_entrevista" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content rounded-3">
+                                    <div class="modal-header py-2">
+                                        <h4 class="modal-title text-white fw-bold ms-auto">Documentos</h4>
+                                        <button class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form id="documentoForm" method="post" action="includes/generate-doc.php">
+                                        <div class="modal-body d-flex flex-column gap-2 py-4 px-5">
+                                            <input type="hidden" class="id" name="id" value="<?= $row['empid'] ?>">
+                                            <div id="estado1">
+                                                <label for="state_entrevista" class="fw-bolder">Seleccione documento</label>
+                                                <select class="form-control rounded" name="documento_tipo" id="documento_tipo">
+                                                    <option value=0 disabled>- Seleccionar -</option>
+                                                    <option value="memorandum">Memorandum</option>
+                                                    <option value="carta_despido">Carta de despido</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-success" name="edit">
+                                                <i class="fa fa-edit me-2"></i>Generar documento
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
+
             </div>
         </section>
 
