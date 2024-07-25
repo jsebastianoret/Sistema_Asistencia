@@ -315,10 +315,49 @@
         });
 
         function getRow(id) {
+    $.ajax({
+        type: 'POST',
+        url: 'schedule_employee_row.php',
+        data: { id: id },
+        dataType: 'json',
+        success: function (response) {
+            $('#employee_title').html(response.firstname + ' ' + response.lastname);
+            $('#cod_practicante').val(response.employee_id);
+            $('#negocio').val(response.nombre_negocio);
+            $('#cargo').val(response.description);
+            $('#horario').val(response.time_in + ' - ' + response.time_out);
+            $('#tiempo').val(response.time_practice + ' meses');
+            $('#celular').val(response.contact_info);
+            $('#cumpleaños').val(response.birthday);
+            $('#dni').val(response.dni);
+            $('#email_personal').val(response.personal_email);
+            $('#email_institucional').val(response.institutional_email);
+            $('#centro_estudios').val(response.university);
+            $('#carrera').val(response.career);
+            $('#fecha_ingreso').val(response.date_in);
+            $('#fecha_salida').val(response.date_out);
+            $('#employee_id').val(response.empid);
+            $('#employee_id2').val(response.empid);
+
+            // Obtener la suma total de horas de trabajo del empleado
             $.ajax({
                 type: 'POST',
-                url: 'schedule_employee_row.php',
-                data: { id: id },
+                url: 'get_total_hours.php',
+                data: { employee_id: response.empid },
+                dataType: 'json',
+                success: function (totalResponse) {
+                    var total_hours = parseFloat(totalResponse.total_hours) || 0; // Asegúrate de que sea un número
+                    var extra_hours = parseFloat(response.extra_hour) || 0; // Manejar si no hay horas extras
+                    var sum_hours = total_hours + extra_hours;
+                    $('#sum_num_hr').val(sum_hours.toFixed(2));
+                }
+            });
+
+            // Obtener y mostrar datos de asistencia
+            $.ajax({
+                type: 'POST',
+                url: 'get_cantidad_asistencia.php',
+                data: { employee_id: response.empid },
                 dataType: 'json',
                 success: function (response) {
                     $('#employee_title').html(response.firstname + ' ' + response.lastname);
@@ -391,9 +430,44 @@
                             salidaNew(dato_salida,faltaInjustificadas,id_user);
                         }
                     });
+
+                    $('#dias_trabajados').val(response.cantidad_asistencia);
+                }
+            });
+            $.ajax({
+                type: 'POST',
+                url: 'get_cantidad_faltas.php',
+                data: { employee_id: response.empid },
+                dataType: 'json',
+                success: function (response) {
+                    $('#dias_faltados').val(response.cantidad_faltas);
+                }
+            });
+            $.ajax({
+                type: 'POST',
+                url: 'get_cantidad_tardanzas.php',
+                data: { employee_id: response.empid },
+                dataType: 'json',
+                success: function (response) {
+                    $('#dias_tardados').val(response.cantidad_tardanzas);
+                }
+            });
+            $.ajax({
+                type: 'POST',
+                url: 'get_cantidad_faltas_justificadas_injustificadas.php',
+                data: { employee_id: response.empid },
+                dataType: 'json',
+                success: function (response) {
+                    $('#faltas_injustificadas').val(response.faltas_injustificadas);
+                    $('#faltas_justificadas').val(response.faltas_justificadas);
+                    var totalFaltas = parseInt(response.faltas_injustificadas) + parseInt(response.faltas_justificadas);
+                    $('#dias_faltados').val(totalFaltas);
                 }
             });
         }
+    });
+}
+
 
         $('body').on('click', '.btn-justificar-faltas', function () {
             var empId = $(this).data('empid');
