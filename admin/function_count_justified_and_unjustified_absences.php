@@ -1,5 +1,4 @@
 <?php
-include 'includes/session.php';
 
 function cantFaltas($employee_id) {
     global $conn;
