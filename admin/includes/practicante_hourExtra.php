@@ -8,7 +8,7 @@ if (isset($_POST['add'])) {
     $id = $conn->real_escape_string($id);
     $newhour = $conn->real_escape_string($newhour);
 
-    $sql = "SELECT extra_hour FROM asistencia.employees WHERE id='$id'";
+    $sql = "SELECT extra_hour FROM employees WHERE id='$id'";
     $query = $conn->query($sql);
 
     if ($query) {
