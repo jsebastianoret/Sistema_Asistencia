@@ -358,12 +358,12 @@
                         data: { employee_id: response.empid },
                         dataType: 'json',
                         success: function (totalResponse) {
-                            var total_hours = parseFloat(totalResponse.total_hours) ||  0;
+                            var total_hours = parseInt(totalResponse.total_hours) ||  0;
                             $('#hora_bruto').val(total_hours);
-                            var extra_hours = parseFloat(response.extra_hour) || 0;
+                            var extra_hours = parseInt(response.extra_hour) || 0;
                             $('#hora_extra').val(extra_hours); 
                             var sum_hours = total_hours + extra_hours;
-                            $('#sum_num_hr').val(sum_hours.toFixed(2));
+                            $('#sum_num_hr').val(parseInt(sum_hours.toFixed(2)));
                     }
                     });
                     $.ajax({
