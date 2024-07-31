@@ -260,10 +260,20 @@
                         </div>
                         <canvas id="myChart" class="p-3"></canvas>
                         <div class="row g-3 d-flex justify-content-center">
-                            <div class="text-center">
-                                <label for="sum_num_hr" class="fw-bolder">Horas de Trabajo</label>
+                        <div class="col-sm-4 text-center">
+                                <label for="hora_bruto" class="fw-bolder">Horas de Trabajo</label>
+                                <input type="text" class="form-control text-center rounded" id="hora_bruto"
+                                    readonly>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <label for="hora_extra" class="fw-bolder">Horas Extra</label>
+                                <input type="text" class="form-control text-center rounded" id="hora_extra" readonly>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <label for="sum_num_hr" class="fw-bolder">Horas Totales</label>
                                 <input type="text" class="form-control text-center rounded" id="sum_num_hr" readonly>
                             </div>
+
                             <div class="col-sm-4 text-center">
                                 <label for="dias_trabajados" class="fw-bolder">Asistencia</label>
                                 <input type="text" class="form-control text-center rounded" id="dias_trabajados"
@@ -348,8 +358,10 @@
                         data: { employee_id: response.empid },
                         dataType: 'json',
                         success: function (totalResponse) {
-                            var total_hours = parseFloat(totalResponse.total_hours) ||  0; // Asegúrate de que sea un número
-                            var extra_hours = parseFloat(response.extra_hour) || 0; // Manejar si no hay horas extras
+                            var total_hours = parseFloat(totalResponse.total_hours) ||  0;
+                            $('#hora_bruto').val(total_hours);
+                            var extra_hours = parseFloat(response.extra_hour) || 0;
+                            $('#hora_extra').val(extra_hours); 
                             var sum_hours = total_hours + extra_hours;
                             $('#sum_num_hr').val(sum_hours.toFixed(2));
                     }
@@ -388,7 +400,7 @@
                         dataType: 'json',
                         success: function (response) {
                             $('#faltas_injustificadas').val(response.faltas_injustificadas),
-                                $('#faltas_justificadas').val(response.faltas_justificadas);
+                            $('#faltas_justificadas').val(response.faltas_justificadas);
                             var totalFaltas = parseInt(response.faltas_injustificadas) + parseInt(response.faltas_justificadas);
                             $('#dias_faltados').val(totalFaltas);
                             let faltaInjustificadas=response.faltas_injustificadas;
