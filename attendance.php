@@ -82,7 +82,7 @@ if (isset($_POST['employee'])) {
 				$fechaEntradaDateTime = new DateTime($fechaEntrada);
 				$fechaSalidaDateTime = new DateTime($fechaSalida);
 				$permiteMarcarDateTime = clone $fechaEntradaDateTime;
-				$permiteMarcarDateTime->modify('-10 minutes');
+				$permiteMarcarDateTime->modify('-5 minutes');
 				
 
 
