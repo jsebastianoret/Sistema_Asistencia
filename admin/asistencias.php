@@ -52,13 +52,20 @@
                             while ($row = $query->fetch_assoc()) {
                                 isset($row['date'])
                                     ? $fecha = date('M d, Y', strtotime($row['date']))
-                                    : 'NO MARCO';
+                                    : $fecha = 'NO MARCO';
+                                
                                 isset($row['time_in'])
                                     ? $entrada = date('h:i A', strtotime($row['time_in']))
-                                    : 'NO MARCO';
-                                isset($row['time_out'])
-                                    ? $salida = date('h:i A', strtotime($row['time_out']))
-                                    : 'NO MARCO';
+                                    : $entrada = 'NO MARCO';
+
+                                // Verifica si el valor de 'time_out' está establecido y no es '00:00:00'
+                                // Si es así, convierte el valor a formato de 12 horas con AM/PM
+                                 // De lo contrario, establece la hora de salida como '--' 
+                                if (isset($row['time_out']) && $row['time_out'] != '00:00:00') {
+                                    $salida = date('h:i A', strtotime($row['time_out']));
+                                } else {
+                                    $salida = '--';
+                                }
 
                                 if (($row['status_v1']) == "1") {
                                     $status = '<span class="badge bg-success ms-1" style="font-size: 11px !important;">A Tiempo</span>';
@@ -87,7 +94,8 @@
                                     <td class="align-middle">
                                         <?php echo $salida ?>
                                     </td>
-                                <?php } ?>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
