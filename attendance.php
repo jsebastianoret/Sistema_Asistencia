@@ -79,15 +79,17 @@ if (isset($_POST['employee'])) {
 				$lognow = date('H:i:s');
 				$lognowDateTime = new DateTime($lognow);
 
+				if($day == 'Saturday'){
+					$fechaSalida='12:00:00'; 
+					$fechaEntrada='09:00:00';
+				}
+
 				$fechaEntradaDateTime = new DateTime($fechaEntrada);
 				$fechaSalidaDateTime = new DateTime($fechaSalida);
 				$permiteMarcarDateTime = clone $fechaEntradaDateTime;
 				$permiteMarcarDateTime->modify('-5 minutes');
 				
-				if($day == 'Saturday'){
-					$fechaSalidaDateTime=new DateTime('12:00:00'); 
-				}
-
+				
 				if ($lognowDateTime < $permiteMarcarDateTime || $lognowDateTime > $fechaSalidaDateTime || $day=='Sunday') {
 					$output['error'] = true;
 					$output['message'] = 'Este no es el horario adecuado para marcar asistencia.';
