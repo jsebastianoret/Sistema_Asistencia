@@ -87,7 +87,7 @@ if (isset($_POST['employee'])) {
 				$fechaEntradaDateTime = new DateTime($fechaEntrada);
 				$fechaSalidaDateTime = new DateTime($fechaSalida);
 				$permiteMarcarDateTime = clone $fechaEntradaDateTime;
-				$permiteMarcarDateTime->modify('-5 minutes');
+				$permiteMarcarDateTime->modify('-6 minutes');
 				
 				
 				if ($lognowDateTime < $permiteMarcarDateTime || $lognowDateTime > $fechaSalidaDateTime || $day=='Sunday') {
@@ -102,7 +102,7 @@ if (isset($_POST['employee'])) {
 					} else {
 						
 						$NuevaFechas = new DateTime($fechaEntrada);
-						$NuevaFechas->modify('+5 minute');
+						$NuevaFechas->modify('+6 minute');
 						$NuevaFechas = $NuevaFechas->format("H:i:s");
 
 						$logstatus = ($lognow > $NuevaFechas) ? 0 : 1;
