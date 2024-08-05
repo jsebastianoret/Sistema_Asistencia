@@ -84,8 +84,10 @@ if (isset($_POST['employee'])) {
 				$permiteMarcarDateTime = clone $fechaEntradaDateTime;
 				$permiteMarcarDateTime->modify('-5 minutes');
 				
-				if($day == 'Saturday'){
+				if($day == 'Saturday' && $sched=2){
 					$fechaSalidaDateTime=new DateTime('12:00:00'); 
+				}else if($day == 'Saturday' && $sched=3){
+					$fechaSalidaDateTime=new DateTime('16:30:00'); 
 				}
 
 				if ($lognowDateTime < $permiteMarcarDateTime || $lognowDateTime > $fechaSalidaDateTime || $day=='Sunday') {
@@ -161,8 +163,10 @@ if (isset($_POST['employee'])) {
 						$srow = $squery->fetch_assoc();
 						$horaSalida = $srow['time_out'];
 						
-						if($day == 'Saturday'){
+						if($day == 'Saturday' && $sched=2){
 							$horaSalida='12:00:00';
+						}else if($day == 'Saturday' && $sched=3){
+							$horaSalida='16:30:00';
 						}
 						
 						$logstatus = ($lognow1 > $horaSalida) ? 0 : 1;
