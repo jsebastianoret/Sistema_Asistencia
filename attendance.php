@@ -75,18 +75,22 @@ if (isset($_POST['employee'])) {
 				$srow = $squery->fetch_assoc();
 				$fechaEntrada = $srow['time_in'];
 				$fechaSalida = $srow['time_out'];
-
+				$day = date('l');
 				$lognow = date('H:i:s');
 				$lognowDateTime = new DateTime($lognow);
+
+				if($day == 'Saturday'){
+					$fechaSalida='12:00:00'; 
+					$fechaEntrada='09:00:00';
+				}
 
 				$fechaEntradaDateTime = new DateTime($fechaEntrada);
 				$fechaSalidaDateTime = new DateTime($fechaSalida);
 				$permiteMarcarDateTime = clone $fechaEntradaDateTime;
-				$permiteMarcarDateTime->modify('-5 minutes');
+				$permiteMarcarDateTime->modify('-6 minutes');
 				
-
-
-				if ($lognowDateTime < $permiteMarcarDateTime || $lognowDateTime > $fechaSalidaDateTime) {
+				
+				if ($lognowDateTime < $permiteMarcarDateTime || $lognowDateTime > $fechaSalidaDateTime || $day=='Sunday') {
 					$output['error'] = true;
 					$output['message'] = 'Este no es el horario adecuado para marcar asistencia.';
 				} else {
@@ -98,7 +102,7 @@ if (isset($_POST['employee'])) {
 					} else {
 						
 						$NuevaFechas = new DateTime($fechaEntrada);
-						$NuevaFechas->modify('+5 minute');
+						$NuevaFechas->modify('+6 minute');
 						$NuevaFechas = $NuevaFechas->format("H:i:s");
 
 						$logstatus = ($lognow > $NuevaFechas) ? 0 : 1;
@@ -153,11 +157,16 @@ if (isset($_POST['employee'])) {
 						//updates
 						$sched = $row['schedule_id'];
 						$lognow1 = date('H:i:s');
+						$day = date('l');
 						$sql = "SELECT * FROM schedules WHERE id = '$sched'";
 						$squery = $conn->query($sql);
 						$srow = $squery->fetch_assoc();
 						$horaSalida = $srow['time_out'];
-
+						
+						if($day == 'Saturday'){
+							$horaSalida='12:00:00';
+						}
+						
 						$logstatus = ($lognow1 > $horaSalida) ? 0 : 1;
 
 
