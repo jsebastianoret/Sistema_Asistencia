@@ -375,7 +375,13 @@
                                 $query = $conn->query($sql);
                                 while ($srow = $query->fetch_assoc()) { ?>
                                     <option value="<?= $srow['id'] ?>">
-                                        <?= $srow['time_in'] . ' - ' . $srow['time_out'] ?>
+                                        <?php
+                                            if ($srow['id'] == '4') {
+                                                echo $srow['time_in'] . ' - ' . $srow['time_out'] . ' -- Flexible';
+                                            } else {
+                                                echo $srow['time_in'] . ' - ' . $srow['time_out'];
+                                            }
+                                        ?>
                                     </option>
                                 <?php } ?>
                             </select>
@@ -545,7 +551,13 @@
                                 $query = $conn->query($sql);
                                 while ($srow = $query->fetch_assoc()) { ?>
                                     <option value="<?= $srow['id'] ?>">
-                                        <?= $srow['time_in'] . ' - ' . $srow['time_out'] ?>
+                                    <?php
+                                        if ($srow['id'] == '4') {
+                                            echo $srow['time_in'] . ' - ' . $srow['time_out'] . ' -- Flexible';
+                                        } else {
+                                            echo $srow['time_in'] . ' - ' . $srow['time_out'];
+                                        }
+                                    ?>
                                     </option>
                                 <?php } ?>
                             </select>
@@ -862,7 +874,6 @@
                     $('#gender_val').val(response.gender).html(response.gender);
                     $('#position_val').val(response.position_id).html(response.description);
                     $('#negocio_val').val(response.negocio_id).html(response.nombre_negocio);
-                    $('#schedule_val').val(response.schedule_id).html(response.time_in + ' - ' + response.time_out);
                     $('#edit_date_in').val(response.date_in).html(response.date_in);
                     $('#departamento_val').val(response.departamento_id).html(response.nombre_departamento);
                     $('#edit_date_out').val(response.date_out).html(response.date_out);
@@ -874,6 +885,11 @@
                     $('#edit_institutional_email').val(response.institutional_email);
                     $('#edit_university').val(response.university);
                     $('#edit_career').val(response.career);
+                    let scheduleText = response.time_in + ' - ' + response.time_out;
+                    if (response.schedule_id == '4') {
+                        scheduleText += ' -- Flexible'; 
+                    }
+                    $('#schedule_val').val(response.schedule_id).html(scheduleText);
                     dato_salida=response.date_out;
                     id_user=response.empid;
                     $.ajax({
