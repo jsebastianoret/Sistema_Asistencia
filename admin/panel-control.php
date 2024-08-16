@@ -48,7 +48,9 @@
                 <a href="asistencias.php" class="text-decoration-none">
                     <div class="card text-center text-white" style="background-color: #1fa72c; border-radius: 16px;">
                         <p class="mb-2 fs-5">Hoy asistieron a tiempo</p>
-                        <?php $sql = "SELECT * FROM attendance WHERE date = date('d/m/Y') AND status = 1";
+                        <?php
+                        // Cambio: Se ajustó la consulta para utilizar CURDATE() en lugar de date('d/m/Y')
+                        $sql = "SELECT * FROM attendance WHERE date = CURDATE() AND status = 1";
                         $query = $conn->query($sql); ?>
 
                         <h1 class="mb-0 fs-1" style="font-weight: 500;">
@@ -62,7 +64,8 @@
                     <div class="card text-center text-white" style="background-color: #f0bd13; border-radius: 16px;">
                         <p class="mb-2 fs-5">Hoy asistieron tarde</p>
                         <?php
-                        $sql = "SELECT * FROM attendance WHERE date = date('Y-m-d') AND status = 0";
+                        // Cambio: Se ajustó la consulta para utilizar CURDATE() en lugar de date('Y-m-d')
+                        $sql = "SELECT * FROM attendance WHERE date = CURDATE() AND status = 0";
                         $query = $conn->query($sql); ?>
 
                         <h1 class="mb-0 fs-1" style="font-weight: 500;">
@@ -78,8 +81,7 @@
             <div class="col-12 col-xl-4 m-0">
                 <div class="card">
                     <div class="box-header">
-                        <h3 class="box-title colorComunicacion" style="color: #1e3d8f;">Informe de asistencia mensual
-                        </h3>
+                        <h3 class="box-title colorComunicacion" style="color: #1e3d8f;">Informe de asistencia mensual</h3>
                     </div>
                     <div class="box-body">
                         <div class="chart">
@@ -114,9 +116,10 @@
                                     isset($row['time_in'])
                                         ? $entrada = date('h:i A', strtotime($row['time_in']))
                                         : 'NO MARCO';
-                                    isset($row['time_out'])
-                                        ? $salida = date('h:i A', strtotime($row['time_out']))
-                                        : 'NO MARCO';
+                                    // Muestra '--' si 'time_out' es '00:00:00'
+                                    $salida = isset($row['time_out']) && !empty($row['time_out']) && $row['time_out'] != '00:00:00'
+                                        ? date('h:i A', strtotime($row['time_out']))
+                                        : '--';
 
                                     if (($row['status_v1']) == "1") {
                                         $status = '<span class="badge bg-success ms-1" style="font-size: 11px !important;">A Tiempo</span>';

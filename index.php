@@ -19,7 +19,7 @@ $estado = $query2->fetch_assoc();
   <div class="asistencia">
     <div class="asistencia__contend">
       <div class="asistencia__campos">
-        <h1 class="asistencia__tittle">¡Hola, Asden Perú te da la bienvenida!</h1>
+        <h1 class="asistencia__tittle">¡Hola, NeonHouseLed te da la bienvenida!</h1>
         <div class="alert mt20 text-center success__alert name__lert" style="display:none;">
           <span class="result"><span class="message"></span></span>
         </div>
