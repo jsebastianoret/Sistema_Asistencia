@@ -44,7 +44,7 @@
 
 					//Condicional para el horario flexible
 					if ($sched == 4) {
-						if ($lognow >= '08:55:00' && $lognow <= '13:24:00') {
+						if ($lognow >= '08:55:00' && $lognow < '13:25:00') {
 							$fechaEntrada = '09:00:00';
 							$fechaSalida = '13:30:00';
 						} elseif ($lognow >= '13:25:00' && $lognow <= '18:05:00') {
@@ -53,17 +53,18 @@
 						}
 					}
 
+					//Condicional para los días sábados
+					if($day == 'Saturday'){
+						$fechaEntrada='09:00:00';
+						$fechaSalida='12:00:00'; 
+					}
+
 					$lognowDateTime = new DateTime($lognow);
 					$fechaEntradaDateTime = new DateTime($fechaEntrada);
 					$fechaSalidaDateTime = new DateTime($fechaSalida);
 					$minPermitido = clone $fechaEntradaDateTime;
 					$minPermitido->modify('-6 minutes');
 					
-					//Condicional para los días sábados
-					if($day == 'Saturday'){
-						$fechaEntrada='09:00:00';
-						$fechaSalida='12:00:00'; 
-					}
 
 					//Validar si es horario laborable
 					if ($lognowDateTime < $minPermitido || $lognowDateTime > $fechaSalidaDateTime || $day=='Sunday') {
@@ -80,7 +81,6 @@
 							$maxPermitido = clone $fechaEntradaDateTime;
 							$maxPermitido->modify('+6 minute');
 							$maxPermitido = $maxPermitido->format("H:i:s");
-							
 							$logstatus = ($lognow > $maxPermitido) ? 0 : 1;
 							if ($logstatus == 1) $lognow = $fechaEntrada;
 							
@@ -131,7 +131,7 @@
 							$horaSalida = $srow['time_out'];
 
 							if($sched==4){
-								if ('08:55:00' <= $time_in && $time_in <= '13:24:00') {
+								if ('08:55:00' <= $time_in && $time_in < '13:25:00') {
 									$horaSalida='13:30:00'; 
 									
 								}else if('13:25:00' <= $time_in && $time_in <= '18:05:00'){
