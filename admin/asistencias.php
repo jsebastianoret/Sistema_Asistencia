@@ -66,14 +66,18 @@
                                 } else {
                                     $salida = '--';
                                 }
-
-                                if (($row['status_v1']) == "1") {
-                                    $status = '<span class="badge bg-success ms-1" style="font-size: 11px !important;">A Tiempo</span>';
-                                } else if (($row['status_v1']) == "0") {
-                                    $status = '<span class="badge bg-warning text-dark ms-1" style="font-size: 11px !important;">Tarde</span>';
-                                } else if (($row['status_v1']) == NULL) {
-                                    $status = '<span class="badge bg-danger ms-1" style="font-size: 11px !important;">No Marco</span>';
-                                } ?>
+                                
+                                $statusText = [
+                                    "1" => '<span class="badge bg-success ms-1" style="font-size: 11px !important;">A Tiempo</span>',
+                                    "0" => '<span class="badge bg-warning text-dark ms-1" style="font-size: 11px !important;">Tarde</span>',
+                                    NULL => '<span class="badge bg-danger ms-1" style="font-size: 11px !important;">No Marcó</span>',
+                                ];
+                                if ($row['schedule_id'] == "4") {
+                                    $status = $statusText[$row['status']] ?? $statusText[NULL];
+                                } else {
+                                    $status = $statusText[$row['status_v1']] ?? $statusText[NULL];
+                                }
+                                ?>
                                 <tr>
                                     <td class="d-none"></td>
                                     <td class="align-middle">
